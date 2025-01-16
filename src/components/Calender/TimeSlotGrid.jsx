@@ -5,20 +5,36 @@ import EventPopup from "./EventPopup";
 const TimeSlotGrid = ({ events, selectedDate, view }) => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [groupedEvents, setGroupedEvents] = useState({ key: null, events: [] });
+  const [detailedEvents, setDetailedEvents] = useState([]);
 
   const openPopup = (event) => {
     setSelectedEvent(event);
     setGroupedEvents({ key: null, events: [] });
   };
 
-  const openGroupedEvents = (events, key) => {
+  const openGroupedEvents = async (events, key) => {
     setGroupedEvents({ key, events });
     setSelectedEvent(null);
+
+    const eventIds = events.map((event) => event.id);
+    const eventIdsParam = eventIds.join(",");
+
+    try {
+      const response = await fetch("/calendar_meeting.json");
+      const data = await response.json();
+      const filteredDetailedEvents = data.filter((event) =>
+        eventIds.includes(event.id)
+      );
+      setDetailedEvents(filteredDetailedEvents);
+    } catch (error) {
+      console.error("Error fetching detailed events:", error);
+    }
   };
 
   const closePopup = () => {
     setSelectedEvent(null);
     setGroupedEvents({ key: null, events: [] });
+    setDetailedEvents([]);
   };
 
   const renderEventsInTimeSlot = (date, hour) => {
@@ -38,6 +54,7 @@ const TimeSlotGrid = ({ events, selectedDate, view }) => {
           key={filteredEvents[0].id}
           event={filteredEvents[0]}
           onClick={() => openPopup(filteredEvents[0])}
+          isGrouped={false}
         />
       );
     }
@@ -59,13 +76,23 @@ const TimeSlotGrid = ({ events, selectedDate, view }) => {
           </div>
           {groupedEvents.key === timeSlotKey && (
             <div className="grouped-events">
-              {groupedEvents.events.map((event) => (
-                <EventCard
-                  key={event.id}
-                  event={event}
-                  onClick={() => openPopup(event)}
-                />
-              ))}
+              {detailedEvents.length > 0
+                ? detailedEvents.map((event) => (
+                    <EventCard
+                      key={event.id}
+                      event={event}
+                      onClick={() => openPopup(event)}
+                      isGrouped={true}
+                    />
+                  ))
+                : filteredEvents.map((event) => (
+                    <EventCard
+                      key={event.id}
+                      event={event}
+                      onClick={() => openPopup(event)}
+                      isGrouped={true}
+                    />
+                  ))}
             </div>
           )}
         </div>
@@ -234,7 +261,7 @@ const TimeSlotGrid = ({ events, selectedDate, view }) => {
                             }
                           }}
                         >
-                          <EventCard event={event} />
+                          <EventCard event={event}  />
                           {arr.length > 1 && (
                             <div
                               className="event-count-badge"
@@ -248,12 +275,14 @@ const TimeSlotGrid = ({ events, selectedDate, view }) => {
                         </div>
                       ) : null
                     )}
+
                   {groupedEvents.key === day.toDateString() && (
                     <div className="grouped-events">
                       {groupedEvents.events.map((event) => (
                         <EventCard
                           key={event.id}
                           event={event}
+                          isGrouped={true}
                           onClick={() => openPopup(event)}
                         />
                       ))}

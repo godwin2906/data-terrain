@@ -1,10 +1,10 @@
 /* General Calendar Styles */
-.header-top-box{
+.header-top-box {
   display: flex;
   justify-content: end;
 }
 
-.sch-button{
+.sch-button {
   background: #fff;
   color: #007bff;
   border: none;
@@ -13,7 +13,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.sch-button svg{
+.sch-button svg {
   color: #007bff;
 }
 
@@ -53,15 +53,14 @@
 }
 
 .view-button.active {
-  border-bottom: 2px solid #007bff; 
-  color: #007bff; 
+  border-bottom: 2px solid #007bff;
+  color: #007bff;
   font-weight: bold;
 }
 
 .view-button:hover {
-  color: #007bff; 
+  color: #007bff;
 }
-
 
 /* Year View Styles */
 .year-grid {
@@ -126,11 +125,10 @@
 .month-empty-cell {
   background-color: #f9f9f9;
 }
-.month-date-cell .event-card-with-group .event-card{
+.month-date-cell .event-card-with-group .event-card {
   margin-bottom: 0;
   margin-left: 0;
 }
-
 
 /* Week View Styles */
 .calendar-grid {
@@ -200,15 +198,13 @@
   justify-content: center;
   cursor: pointer;
 }
-.time-slot .event-card{
+.time-slot .event-card {
   margin: 0;
 }
-.time-slot .event-card-with-group .grouped-events .event-card{
-  margin-bottom:6px ;
+.time-slot .event-card-with-group .grouped-events .event-card {
+  margin-bottom: 6px;
   margin-left: 10px;
 }
-
-
 
 /* Day View Styles */
 .day-grid {
@@ -223,13 +219,16 @@
   height: 10rem;
   align-items: flex-end;
 }
-.day-cell{
+.day-cell {
   width: 100%;
 }
-.day-cell .event-card{
+.day-cell .event-card {
   width: fit-content;
 }
-.time-cell{
+.day-cell .grp-event-card{
+  width: 300px;
+}
+.time-cell {
   height: 100%;
   border-right: 1px solid #ddd;
   width: 20%;
@@ -237,7 +236,7 @@
   align-items: end;
   justify-content: center;
 }
-.time-label{
+.time-label {
   text-align: center;
   color: #007bff;
 }
@@ -258,8 +257,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  backdrop-filter: blur(8px); 
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -268,7 +267,7 @@
 
 /* Popup Container */
 
-.event-box-pop{
+.event-box-pop {
   background: #ffffff;
   border-radius: 8px;
   width: 500px;
@@ -292,7 +291,7 @@
 .popup-left {
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #ddd;;
+  border-right: 1px solid #ddd;
   gap: 24px;
   padding-right: 20px;
   flex: 1;
@@ -310,7 +309,7 @@
   align-items: center;
   padding: 10px 15px;
   background-color: transparent;
-  border: 2px solid #007bff; 
+  border: 2px solid #007bff;
   border-radius: 5px;
   font-size: 14px;
   color: #007bff;
@@ -320,22 +319,20 @@
 }
 
 .doc-button:hover {
-  background-color: #e6f2ff; 
+  background-color: #e6f2ff;
 }
 
 .doc-button .eye-icon {
   display: flex;
   gap: 8px;
-  color: #007bff; 
+  color: #007bff;
   font-size: 18px;
 }
-
 
 .doc-button .eye-icon svg {
   width: 18px;
   height: 18px;
 }
-
 
 .doc-button span {
   flex: 1;
@@ -352,7 +349,6 @@
   color: #555;
   margin: 0;
 }
-
 
 .popup-right {
   display: flex;
@@ -416,10 +412,12 @@
   margin-bottom: 10px;
 }
 
-.event-card:hover{
- background-color: #D4EFFE;
+.event-card:hover {
+  background-color: #d4effe;
 }
-.heading-event-card, .interview-event-card, .time-event-card{
+.heading-event-card,
+.interview-event-card,
+.time-event-card {
   margin: 6px 0;
 }
 
@@ -432,7 +430,7 @@
   position: absolute;
   top: -4px;
   right: -4px;
-  background-color: #FFD05A;
+  background-color: #ffd05a;
   color: #000;
   border-radius: 50%;
   width: 20px;
@@ -440,7 +438,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px; 
+  font-size: 12px;
   cursor: pointer;
 }
 .event-card-with-group {
@@ -476,4 +474,41 @@
   font-family: Arial, sans-serif;
   color: #333;
   line-height: 1.5;
+}
+.grouped-edit {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.icon-box {
+  display: flex;
+  gap: 8px;
+}
+.icon-box svg {
+  width: 15px;
+  height: 15px;
+}
+.grouped-edit h4 {
+  margin: 0;
+}
+.grouped-flex-box {
+  display: flex;
+  margin-bottom: 10px;
+}
+.grp-event-card {
+  width: 300px;
+  padding: 20px 10px;
+}
+.grouped-flex-box p {
+  margin: 0%;
+}
+.summary-grouped,
+.date-grouped {
+  border-right: 1px solid #ddd;
+  padding-right: 16px;
+}
+
+.interviewer-grouped,
+.time-grouped {
+  padding-left: 16px;
 }

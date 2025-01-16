@@ -28,7 +28,6 @@ const Calendar = () => {
     fetchEvents();
   }, []);
 
-
   return (
     <div>
       <Header
