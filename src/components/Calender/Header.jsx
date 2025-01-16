@@ -29,7 +29,6 @@ const Header = ({ view, setView, selectedDate, setSelectedDate }) => {
       );
       const year = date.getFullYear();
   
-      // Add ordinal suffix as superscript
       const ordinalSuffix = (day) => {
         if (day % 10 === 1 && day !== 11) return `<sup>st</sup>`;
         if (day % 10 === 2 && day !== 12) return `<sup>nd</sup>`;

@@ -11,7 +11,11 @@ const EventPopup = ({ event, onClose }) => {
     hour: "2-digit",
     minute: "2-digit",
   });
-  const interviewDate = new Date(event.start).toLocaleDateString();
+  const interviewDate = new Intl.DateTimeFormat("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  }).format(new Date(event.start));
 
   return (
     <div className="event-popup-overlay">
@@ -28,7 +32,6 @@ const EventPopup = ({ event, onClose }) => {
             <p>Interview Time: {`${startTime} - ${endTime}`}</p>
             <p>Interview via: Google Meet</p>
 
-            {/* Resume and Aadharcard Buttons */}
             <div className="document-buttons">
               <button className="doc-button">
                 <span>Resume.docx</span>
