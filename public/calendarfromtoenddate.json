@@ -1,0 +1,255 @@
+[
+  {
+    "id": 101,
+    "summary": "Tech Screening",
+    "desc": "Technical round with coding tasks.",
+    "start": "2025-01-15T15:00:00+05:30",
+    "end": "2025-01-15T15:30:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "P": 9
+    },
+    "link": "http://www.example1.com",
+    "user_det": {
+      "id": 101,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 101,
+        "candidate_firstName": "Arjun",
+        "candidate_lastName": "Sharma",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "arjun.sharma@example.com"
+      },
+      "handled_by": {
+        "id": 201,
+        "last_login": null,
+        "userEmail": "recruiter1@example.com",
+        "username": "recruiter_1",
+        "firstName": "Reena",
+        "lastName": "Kumar",
+        "userRole": "hr_employee"
+      },
+      "job_id": {
+        "id": 301,
+        "jobRequest_Title": "React Developer",
+        "jobRequest_Role": "Frontend Developer",
+        "jobRequest_KeySkills": "React, JavaScript",
+        "jobRequest_Description": "Frontend developer role focused on React.js."
+      }
+    },
+    "job_id": {
+      "id": 301,
+      "jobRequest_Title": "React Developer",
+      "jobRequest_Role": "Frontend Developer",
+      "jobRequest_KeySkills": "React, JavaScript",
+      "jobRequest_Description": "Frontend developer role focused on React.js."
+    }
+  },
+  {
+    "id": 102,
+    "summary": "HR Discussion",
+    "desc": "Discussion on role expectations.",
+    "start": "2025-01-15T15:00:00+05:30",
+    "end": "2025-01-15T15:30:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "P": 8
+    },
+    "link": "http://www.example2.com",
+    "user_det": {
+      "id": 102,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 102,
+        "candidate_firstName": "Sneha",
+        "candidate_lastName": "Patel",
+        "candidateGender": "female",
+        "candidateComment": "",
+        "candidate_email": "sneha.patel@example.com"
+      },
+      "handled_by": {
+        "id": 202,
+        "last_login": null,
+        "userEmail": "recruiter2@example.com",
+        "username": "recruiter_2",
+        "firstName": "Anita",
+        "lastName": "Verma",
+        "userRole": "hr_employee"
+      },
+      "job_id": {
+        "id": 302,
+        "jobRequest_Title": "Backend Engineer",
+        "jobRequest_Role": "Backend Developer",
+        "jobRequest_KeySkills": "Node.js, MongoDB",
+        "jobRequest_Description": "Backend engineer for API development."
+      }
+    },
+    "job_id": {
+      "id": 302,
+      "jobRequest_Title": "Backend Engineer",
+      "jobRequest_Role": "Backend Developer",
+      "jobRequest_KeySkills": "Node.js, MongoDB",
+      "jobRequest_Description": "Backend engineer for API development."
+    }
+  },
+  {
+    "id": 103,
+    "summary": "Final Round",
+    "desc": "Final interview with project discussion.",
+    "start": "2025-01-15T15:00:00+05:30",
+    "end": "2025-01-15T15:30:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "P": 10
+    },
+    "link": "http://www.example3.com",
+    "user_det": {
+      "id": 103,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 103,
+        "candidate_firstName": "Vikram",
+        "candidate_lastName": "Singh",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "vikram.singh@example.com"
+      },
+      "handled_by": {
+        "id": 203,
+        "last_login": null,
+        "userEmail": "recruiter3@example.com",
+        "username": "recruiter_3",
+        "firstName": "Amit",
+        "lastName": "Das",
+        "userRole": "hr_manager"
+      },
+      "job_id": {
+        "id": 303,
+        "jobRequest_Title": "Full Stack Developer",
+        "jobRequest_Role": "Full Stack Engineer",
+        "jobRequest_KeySkills": "React, Node.js",
+        "jobRequest_Description": "Full stack role for building web applications."
+      }
+    },
+    "job_id": {
+      "id": 303,
+      "jobRequest_Title": "Full Stack Developer",
+      "jobRequest_Role": "Full Stack Engineer",
+      "jobRequest_KeySkills": "React, Node.js",
+      "jobRequest_Description": "Full stack role for building web applications."
+    }
+  },
+  {
+    "id": 104,
+    "summary": "Team Meet",
+    "desc": "Introduction to the team.",
+    "start": "2025-01-22T06:00:00+05:30",
+"end": "2025-01-22T07:00:00+05:30",
+
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "P": 6
+    },
+    "link": "http://www.example4.com",
+    "user_det": {
+      "id": 104,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 104,
+        "candidate_firstName": "Aditi",
+        "candidate_lastName": "Malhotra",
+        "candidateGender": "female",
+        "candidateComment": "",
+        "candidate_email": "aditi.malhotra@example.com"
+      },
+      "handled_by": {
+        "id": 204,
+        "last_login": null,
+        "userEmail": "recruiter4@example.com",
+        "username": "recruiter_4",
+        "firstName": "Rajesh",
+        "lastName": "Kapoor",
+        "userRole": "hr_manager"
+      },
+      "job_id": {
+        "id": 304,
+        "jobRequest_Title": "DevOps Engineer",
+        "jobRequest_Role": "DevOps Specialist",
+        "jobRequest_KeySkills": "AWS, Docker, Kubernetes",
+        "jobRequest_Description": "Specialist role in cloud and container technologies."
+      }
+    },
+    "job_id": {
+      "id": 304,
+      "jobRequest_Title": "DevOps Engineer",
+      "jobRequest_Role": "DevOps Specialist",
+      "jobRequest_KeySkills": "AWS, Docker, Kubernetes",
+      "jobRequest_Description": "Specialist role in cloud and container technologies."
+    }
+  },
+  {
+    "id": 105,
+    "summary": "Feedback Session",
+    "desc": "Feedback and next steps.",
+    "start": "2025-01-20T11:00:00+05:30",
+    "end": "2025-01-20T11:30:00+05:30",
+    "attendees": null,
+    "status": null,
+    "comment": null,
+    "score": {
+      "P": 7
+    },
+    "link": "http://www.example5.com",
+    "user_det": {
+      "id": 105,
+      "question_score": null,
+      "status": null,
+      "candidate": {
+        "id": 105,
+        "candidate_firstName": "Rahul",
+        "candidate_lastName": "Nair",
+        "candidateGender": "male",
+        "candidateComment": "",
+        "candidate_email": "rahul.nair@example.com"
+      },
+      "handled_by": {
+        "id": 205,
+        "last_login": null,
+        "userEmail": "recruiter5@example.com",
+        "username": "recruiter_5",
+        "firstName": "Sunita",
+        "lastName": "Mishra",
+        "userRole": "hr_employee"
+      },
+      "job_id": {
+        "id": 305,
+        "jobRequest_Title": "QA Engineer",
+        "jobRequest_Role": "Quality Assurance Engineer",
+        "jobRequest_KeySkills": "Testing, Selenium",
+        "jobRequest_Description": "QA role for manual and automated testing."
+      }
+
+
+    },
+    "job_id": {
+      "id": 305,
+      "jobRequest_Title": "QA Engineer",
+      "jobRequest_Role": "Quality Assurance Engineer",
+      "jobRequest_KeySkills": "Testing, Selenium",
+      "jobRequest_Description": "QA role for manual and automated testing."
+    }
+  }
+]
